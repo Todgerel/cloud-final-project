@@ -6,6 +6,8 @@ import { backendUrl } from "../data";
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 import InputMask from 'react-input-mask';
 
+const api_key = process.env.REACT_APP_API_KEY;
+
 export default function ContactForm() {
   const [isValidated, setIsValidated] = React.useState(false);
   const [isProcessing, setIsProcessing] = React.useState(false);
@@ -15,12 +17,14 @@ export default function ContactForm() {
   const { theme } = useAppContext();
 
   async function postData(data) {
+
     const response = await fetch(backendUrl, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        "X-Api-Key": api_key
       },
     });
     return response;

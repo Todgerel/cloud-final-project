@@ -18,6 +18,8 @@ import { Loading } from "./components/globalStyledComponents";
 import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/GlobalStyles";
 import NavBar from "./components/NavBar";
+import ReadArticle from "./components/readarticle/readArticle";
+
 // Pages
 import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
@@ -89,6 +91,7 @@ export default function App() {
           </Element>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route path="/article/:slug" element={<ReadArticle />} />
             <Route path="/All-Projects" element={<AllProjects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Blogs from "../components/Blogs";
 import Contact from "../components/Contact";
 import { BackToTop } from "../components/globalStyledComponents";
 import Footer from "../components/Footer";
@@ -27,6 +28,7 @@ export default function Home() {
         <AboutMe />
         <Skills />
         <Projects />
+        <Blogs />
         <Contact />
       </main>
       <BackToTop home={"Home"} />
